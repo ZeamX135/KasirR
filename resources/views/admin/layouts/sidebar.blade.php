@@ -48,14 +48,16 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/admin/user" class="nav-link {{ Request::is('admin/user*') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-users"></i>
-                        <p>
-                            User
-                        </p>
-                    </a>
-                </li>
+                @if (Auth::user()->usertype == 'admin')
+                    <li class="nav-item">
+                        <a href="/admin/user" class="nav-link {{ Request::is('admin/user*') ? 'active' : '' }}">
+                            <i class="nav-icon fas fa-users"></i>
+                            <p>
+                                User
+                            </p>
+                        </a>
+                    </li>
+                @endif
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

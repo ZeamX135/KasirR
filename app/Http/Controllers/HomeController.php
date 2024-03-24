@@ -15,7 +15,7 @@ class HomeController extends Controller
 
             if($usertype == 'petugas')
             {
-                return view('dashboard');
+                return redirect('/admin/dashboard');
             }
             elseif($usertype == 'admin')
             {
