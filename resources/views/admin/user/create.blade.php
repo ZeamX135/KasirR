@@ -1,4 +1,4 @@
-<div class="container-fluid pt-2">
+<div class="pt-2 container-fluid">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
@@ -60,6 +60,14 @@
                                         {{ $message }}
                                     </div>
                                 @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for=""><b>Role</b></label>
+                                <select class="form-control" name="usertype">
+                                    <option value="admin">Admin</option>
+                                    <option value="petugas">Petugas</option>
+                                </select>
                             </div>
 
                             <a href="/admin/user" class="btn btn-secondary"><i class="fas fa-arrow-left"></i>

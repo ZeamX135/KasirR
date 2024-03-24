@@ -42,9 +42,12 @@ class AdminUserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required',
+            'usertype' => 'required',
             'password_confirmation' => 'required|same:password',
         ]);
         $data['password'] = Hash::make($data['password']);
+
+        $data['usertype'] = $request->usertype;
 
         User::create($data);
 
